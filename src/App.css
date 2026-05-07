@@ -1,0 +1,181 @@
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Map on the Left */
+.map-side {
+  flex: 1;
+  height: 100vh;
+  position: relative;
+  background: #e5e7eb;
+}
+
+/* Sidebar on the Right */
+.sidebar-side {
+  width: 500px;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+  z-index: 100;
+  border-left: 2px solid #e0e0e0;
+}
+
+.sidebar-header {
+  padding: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a73e8;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.location-card {
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.location-card:hover {
+  background: #f8f9fa;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.location-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
+  color: #202124;
+}
+
+.location-card p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  color: #5f6368;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-call {
+  flex: 1;
+  padding: 8px;
+  background: #34a853;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-view {
+  flex: 1;
+  padding: 8px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Admin Panel Styles */
+.admin-panel {
+  padding: 20px;
+}
+
+.admin-section {
+  margin-bottom: 24px;
+}
+
+.admin-panel input, 
+.admin-panel select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.admin-panel button {
+  width: 100%;
+  padding: 12px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-panel .row {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+  .sidebar-side {
+    width: 100%;
+    height: 50%;
+  }
+  .map-side {
+    height: 50%;
+  }
+}
+
+/* Clean up Leaflet Popups */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: 350px !important;
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
